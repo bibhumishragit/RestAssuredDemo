@@ -24,7 +24,7 @@ public class DDTests {
 		
 		Response response=user_endpoints.createUser(userPayload);
 		response.then().log().all();
-		Assert.assertEquals(response.getStatusCode(),200);
+		Assert.assertEquals(200, response.getStatusCode());
 	}
 	
 	
@@ -42,8 +42,18 @@ public class DDTests {
 	@Test(priority=3,dataProvider="UserNames",dataProviderClass=DataProviders.class)
 	public void testDeleteuser(String UserName) {
 		Response response=user_endpoints.deleteUser(UserName);
-		Assert.assertEquals(response.getStatusCode(), 200);
+		Assert.assertEquals(200, response.getStatusCode());
+        System.out.println("ALl information of usernames::");
 	}
-	
+
+    @Test(dataProvider = "firstName",dataProviderClass = DataProviders.class)
+    public void testGetuser() {
+        System.out.println("All data for the Firstname of users::");
+    }
+
+	@Test(dataProvider = "firstName",dataProviderClass= DataProviders.class)
+	public void getpassword(){
+
+	}
 	
 }

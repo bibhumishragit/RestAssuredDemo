@@ -1,11 +1,13 @@
 package api.utilities;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 import org.testng.annotations.DataProvider;
 
 public class DataProviders {
-	@DataProvider(name="Data")
+
+    @DataProvider(name="Data")
 	public String[][] getAllData()throws IOException{
 		String path=System.getProperty("D://Eclipse-Workspace//RestAssured//TestData//testdata1.xlsx");
 		testUtilities xl=new testUtilities(path);
@@ -27,12 +29,28 @@ public class DataProviders {
 		testUtilities xl=new testUtilities(path);
 		int rownum=xl.getRowCount("Sheet1");
 		
-		String apidata[]=new String[rownum];
+		String[] username=new String[rownum];
 		for(int i=1;i<=rownum;i++) {
-			apidata[i-1]=xl.getCellData("Sheet1", i,1);
+			username[i-1]=xl.getCellData("Sheet1", i,1);
 		}
-		return apidata;
-		
+        for(int i=0;i< username.length;i++){
+            System.out.println("Username found from test data::"+username[i]);
+        }
+		return username;
 	}
 
+    @DataProvider(name="firstName")
+    public String[] getfirstName() throws IOException {
+        String filepath = System.getProperty("D://Eclipse-Workspace//RestAssured//TestData//testdata1.xlsx");
+        testUtilities excelfile=new testUtilities(filepath);
+        int rowcount=excelfile.getRowCount("Sheet1");
+        String[] firstName=new String[rowcount];
+        for(int i=1;i<=rowcount;i++) {
+            firstName[i-1]=excelfile.getCellData("Sheet1", i,2);
+        }
+        for(int i=0;i< firstName.length;i++){
+            System.out.println("Username found from test data::"+firstName[i]);
+        }
+        return firstName;
+    }
 }

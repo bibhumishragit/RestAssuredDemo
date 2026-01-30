@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-30T19:24:38 IST" name="Default suite" finished-at="2023-06-30T19:24:38 IST" duration-ms="79">
+  <suite started-at="2023-08-16T16:47:53 IST" name="Default suite" finished-at="2023-08-16T16:47:53 IST" duration-ms="108">
     <groups>
     </groups>
-    <test started-at="2023-06-30T19:24:38 IST" name="Default test" finished-at="2023-06-30T19:24:38 IST" duration-ms="79">
+    <test started-at="2023-08-16T16:47:53 IST" name="Default test" finished-at="2023-08-16T16:47:53 IST" duration-ms="108">
       <class name="api.test.DDTests">
-        <test-method signature="testPostuser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.DDTests@478190fc]" started-at="2023-06-30T19:24:38 IST" name="testPostuser" data-provider="Data" finished-at="2023-06-30T19:24:38 IST" duration-ms="0" status="FAIL">
+        <test-method signature="testPostuser(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:api.test.DDTests@478190fc]" started-at="2023-08-16T16:47:53 IST" name="testPostuser" data-provider="Data" finished-at="2023-08-16T16:47:53 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[java.lang.NullPointerException]]>
@@ -45,8 +45,10 @@ at java.base/java.io.FileInputStream.<init>(FileInputStream.java:149)
 at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
 at api.utilities.testUtilities.getRowCount(testUtilities.java:31)
 at api.utilities.DataProviders.getAllData(DataProviders.java:12)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
@@ -57,7 +59,7 @@ at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedExce
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostuser -->
-        <test-method signature="testDeleteuser(java.lang.String)[pri:3, instance:api.test.DDTests@478190fc]" started-at="2023-06-30T19:24:38 IST" name="testDeleteuser" data-provider="UserNames" finished-at="2023-06-30T19:24:38 IST" duration-ms="0" status="FAIL">
+        <test-method signature="testDeleteuser(java.lang.String)[pri:3, instance:api.test.DDTests@478190fc]" started-at="2023-08-16T16:47:53 IST" name="testDeleteuser" data-provider="UserNames" finished-at="2023-08-16T16:47:53 IST" duration-ms="0" status="FAIL">
           <exception class="java.lang.RuntimeException">
             <message>
               <![CDATA[java.lang.NullPointerException]]>
@@ -95,8 +97,10 @@ at java.base/java.io.FileInputStream.<init>(FileInputStream.java:149)
 at java.base/java.io.FileInputStream.<init>(FileInputStream.java:111)
 at api.utilities.testUtilities.getRowCount(testUtilities.java:31)
 at api.utilities.DataProviders.getUserNames(DataProviders.java:28)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
